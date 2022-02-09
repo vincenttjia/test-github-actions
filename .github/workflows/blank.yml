@@ -33,7 +33,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "Test File Content\nDoes enter work?" > text.txt
+        run: echo "Oreno baka des for not putting new line on prefix\nWHYYYYY" > text.txt
         
       - run: cat text.txt
       - run: pwd
@@ -43,6 +43,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          messagePrefix: "Does newline work?\nHopefully it does\n```"
+          messagePrefix: "Does newline work?\nHopefully it does\n```\n"
           path: text.txt
-          messageSuffix: "```\n\ntrying another new line"
+          messageSuffix: "\n```\n\ntrying another new line"
