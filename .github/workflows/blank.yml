@@ -33,7 +33,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "Why doesnt \n work on txt?" > text.txt
+        run: echo -e "Why doesnt \n work on txt?" > text.txt
+      
 
       - name: Comment to PR from file
         uses: vincenttjia/github-actions-pr-comment@v0.0.8
