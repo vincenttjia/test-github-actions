@@ -39,6 +39,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          prefix: "```"
+          messagePrefix: "```"
           path: text.txt
-          suffix: "```"
+          messageSuffix: "```"
