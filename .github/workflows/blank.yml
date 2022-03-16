@@ -33,13 +33,14 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "Test File Content" > text.txt
+        run: echo -e "Why doesnt \n work on txt?" > text.txt
+      
 
       - name: Comment to PR from file
-        uses: vincenttjia/github-actions-pr-comment@v0.0.2
+        uses: vincenttjia/github-actions-pr-comment@v0.0.8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          messagePrefix: "```"
+          messagePrefix: "Does newline work?\nHopefully it does \n```"
           path: text.txt
-          messageSuffix: "```"
+          messageSuffix: "```\ntrying another new line"
